@@ -1,0 +1,35 @@
+# ─── Datasets & model weights (downloaded separately, never committed) ───
+/data/**
+!/data/README.md
+/model/**
+!/model/README.md
+
+# Large binaries by extension (safety net, anywhere in tree)
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.xlsx
+*.gz
+*.spm
+*-ubyte
+
+# ─── Python ───
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ─── Jupyter ───
+.ipynb_checkpoints/
+
+# ─── OS / editor junk ───
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+.idea/
+.vscode/

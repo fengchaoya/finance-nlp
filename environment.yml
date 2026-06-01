@@ -1,0 +1,41 @@
+# Conda/mamba environment (recommended for miniforge users).
+#   mamba env create -f environment.yml   # or: conda env create -f environment.yml
+#   mamba activate nlp
+#
+# Strategy: install everything that has compiled/native code from conda-forge
+# (one consistent BLAS/LLVM toolchain, no compiler needed). This keeps the
+# pip-hostile chain (numba/llvmlite/hdbscan/umap-learn, pulled in by bertopic)
+# fully conda-managed. See README for the "conda-first + pip-latest" variant.
+name: nlp
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+
+  # --- numeric / data stack (optimized BLAS via conda-forge) ---
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - openpyxl                # pandas .xlsx engine (notebook 03)
+
+  # --- deep learning (conda-forge build; MPS-enabled on Apple Silicon) ---
+  # NOTE: PyTorch no longer maintains its own `pytorch` conda channel — use
+  # conda-forge (here) or pip. Do NOT add `-c pytorch`.
+  - pytorch
+
+  # --- classic word embeddings ---
+  - gensim                  # pretrained word2vec (GoogleNews-SLIM)
+
+  # --- transformer / NLP stack ---
+  - transformers
+  - evaluate
+  - sentencepiece           # MarianMT tokenizer backend (notebook 05)
+  - sentence-transformers
+  - bertopic                # brings numba / llvmlite / hdbscan / umap-learn
+
+  # --- notebook environment ---
+  - jupyterlab               # `jupyter lab`
+  - notebook                 # `jupyter notebook` (classic UI)
+  - ipywidgets

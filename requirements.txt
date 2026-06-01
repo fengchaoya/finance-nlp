@@ -1,0 +1,27 @@
+# Pip workflow (venv). If you use conda/mamba, prefer environment.yml instead
+# (see README → Setup). Pin versions here later if you want exact reproducibility.
+
+# Core deep learning
+torch
+
+# Data / scientific stack
+numpy
+pandas
+scikit-learn
+matplotlib
+openpyxl          # pandas engine for the .xlsx stock data (notebook 03)
+
+# Classic word embeddings
+gensim            # loading pretrained word2vec (GoogleNews-SLIM)
+
+# Transformers / NLP
+transformers
+evaluate
+sentencepiece     # tokenizer backend for MarianMT en->zh (notebook 05)
+sentence-transformers
+bertopic          # pulls umap-learn / hdbscan / numba / llvmlite
+
+# Notebook environment
+jupyterlab        # `jupyter lab`
+notebook          # `jupyter notebook` (classic UI)
+ipywidgets
