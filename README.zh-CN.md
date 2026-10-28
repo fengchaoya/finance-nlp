@@ -30,7 +30,7 @@
 ## 目录结构
 
 ```
-financial-nlp/
+finance-nlp/
 ├── 01_textcnn_sentiment.ipynb
 ├── 02_textrnn_sentiment.ipynb
 ├── 03_stock_price_gru_tcn.ipynb
@@ -54,8 +54,8 @@ financial-nlp/
 ## 环境配置
 
 ```bash
-git clone <your-repo-url>
-cd financial-nlp
+git clone https://github.com/fengchaoya/finance-nlp.git
+cd finance-nlp
 ```
 
 **方案 A — conda / mamba**（推荐，使用 `environment.yml`）：

@@ -32,7 +32,7 @@ time-series detour into **stock-price forecasting**.
 ## Repository layout
 
 ```
-financial-nlp/
+finance-nlp/
 ├── 01_textcnn_sentiment.ipynb
 ├── 02_textrnn_sentiment.ipynb
 ├── 03_stock_price_gru_tcn.ipynb
@@ -56,8 +56,8 @@ Datasets and model weights are **not committed** (large + licensed); see
 ## Setup
 
 ```bash
-git clone <your-repo-url>
-cd financial-nlp
+git clone https://github.com/fengchaoya/finance-nlp.git
+cd finance-nlp
 ```
 
 **Option A — conda / mamba** (recommended; uses `environment.yml`):
